@@ -51,52 +51,130 @@ table {
   border-spacing: 0;
 }
 
+a{
+  text-decoration: none;
+  padding: 3px;
+}
+a:hover{ 
+  color: blue;
+  border: solid green 1px;
+}
+
+header{
+  display: flex;
+  align-content:space-evenly;
+}
+
 #htop{
-    background-image: url("Colores y texturas/02.jpg");
+    display: flex;
+    align-items: center;
+    justify-content:space-between;    
+    background-image: url("Colores y texturas/06.jpg");
     background-size: cover;
-    padding: 5px;
+    padding: 3px;
     
     }
 
 #redestop{
-    text-align: justify;
-    font: bold 1.1em Verdana, Geneva, sans-serif;
+    display: inline;
+    border: 3px solid black;
+    align-items:center;
+    font: 20px bold verdana;
+   }
+#lupa {
+  display: flex;
+  align-items:center;
+  border: 3px solid black;
+  border-radius: 3px;
+ 
 }
 li {
     display: inline;
     padding: 15px;
     text-align: center;
-}
-#lupa {
-    padding-inline-start: 1250px;
-}
-#entrada{
-    background-color: tomato;
-    
-}
-#imagen1{
-    background-color: yellow;
-   
-}
-nav{
-    background-image: url("Colores y texturas/07.jpg");
-    background-size: cover;
-}
-#hmid{
-    background-image: url("Colores y texturas/11.jpg");
-    background-size: cover;
-}
-div{
-    height: 95%;
-    width: 40%;
-    margin: 15px;
-    padding: 20px;
-    float: left;
-    /* border-radius: 20px black; */
-    box-shadow: rgb(51, 51, 40) 1px 1px 5px;
+
 
 }
+#hmid{
+  background-image: url("https://placeimg.com/1000/480/nature");
+  background-size: cover;
+}
+
+nav{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  background-image: url("Colores y texturas/07.jpg");
+  background-size: cover;
+  padding: 12px;
+}
+
+#div.menulista{
+  display: inline;
+  align-items:center;
+  font: 10px bold verdana;
+  
+}
+.central {
+  display: flex;
+  justify-content:space-around; 
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 12px;
+  box-shadow: rgb(51, 51, 40) 1px 1px 5px;
+  background-image: url("Colores y texturas/06.jpg");
+  background-size:cover;
+  opacity: 0.7;
+}
+#imagen1{
+    background-color: tomato;
+    margin: 12px; 
+    padding: 12px;
+    border-radius: 50px black;
+    box-shadow: rgb(51, 51, 40) 1px 1px 5px;
+}
+#entrada{
+    display: flex;
+    align-items:center;
+    background-color: yellow;
+    padding: 12px;
+    border-radius: 50px black;
+    box-shadow: rgb(51, 51, 40) 1px 1px 5px;
+}
+
 footer{
     clear: both;
     background-color: lightblue;
+}
+
+@media screen and (max-width: 768px) {
+  .central {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .central {
+    width: 95%;
+  }
+  #linksnav {
+    position: relative;
+}
+  .menulista {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background:rgba(255, 255, 255, 0.5);
+  }
+  .hamburguesa {
+    border: 1px solid gray;
+    text-align: center;
+  }
+
+  .hamburguesa:hover + .menulista{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+}
 }
