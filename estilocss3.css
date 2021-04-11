@@ -46,14 +46,16 @@ del {
 }
 
 /* En el código HTML es necesario añadir cellspacing="0" */
-table {
+/* table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; */
+/* } */
 
 a{
+  color:#050759;
   text-decoration: none;
   padding: 3px;
+  font-family: 'Crimson Pro', serif;
 }
 a:hover{ 
   color: blue;
@@ -77,14 +79,16 @@ header{
 
 #redestop{
     display: inline;
-    border: 3px solid black;
+    border: 1px solid black;
     align-items:center;
-    font: 20px bold verdana;
+    font-family: 'Work Sans', sans-serif;
+    font: 20px italic bold;
    }
+
 #lupa {
   display: flex;
   align-items:center;
-  border: 3px solid black;
+  border: 1px solid black;
   border-radius: 3px;
  
 }
@@ -92,7 +96,7 @@ li {
     display: inline;
     padding: 15px;
     text-align: center;
-
+    
 
 }
 #hmid{
@@ -108,54 +112,115 @@ nav{
   background-size: cover;
   padding: 12px;
 }
+.hamburguesa {
+  display: none;
+ }
 
 #div.menulista{
   display: inline;
   align-items:center;
-  font: 10px bold verdana;
-  
+    
 }
 .central {
   display: flex;
-  justify-content:space-around; 
-  align-items: center;
+  justify-content:space-evenly; 
+  align-items:center;
   flex-wrap: wrap;
   margin: 12px;
   box-shadow: rgb(51, 51, 40) 1px 1px 5px;
   background-image: url("Colores y texturas/06.jpg");
   background-size:cover;
   opacity: 0.7;
+  
+}
+section{
+  margin: 12px; 
+  padding: 12px;
+  border-radius: 12px black;
+  box-shadow: rgb(51, 51, 40) 1px 1px 5px;
+  width: 40%;
+}
+section:hover {
+  transform: scale(1.03);
+  
 }
 #imagen1{
     background-color: tomato;
-    margin: 12px; 
-    padding: 12px;
-    border-radius: 50px black;
-    box-shadow: rgb(51, 51, 40) 1px 1px 5px;
+    transition: transform ease-in-out 0.3s 0.1s;
+   
+}
+.textocentral1{
+    display:ruby-text;
+    text-align: justify;
+    font-family: 'Work Sans', sans-serif;
 }
 #entrada{
-    display: flex;
+    display: inline;
     align-items:center;
     background-color: yellow;
-    padding: 12px;
-    border-radius: 50px black;
-    box-shadow: rgb(51, 51, 40) 1px 1px 5px;
+    transition: transform ease-in-out 0.3s 0.1s;
 }
+#botonentrada{
+  margin-left: 40%;
+}
+
 
 footer{
+    height: 130px;
     clear: both;
     background-color: lightblue;
+    
 }
-
+.piepagina{
+    width: 20%;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+    display:flex;
+    text-align: justify;
+}
 @media screen and (max-width: 768px) {
+  .hamburguesa {
+   display: none;
+  }
   .central {
-    width: 95%;
+    width: 97%;
+  
+  }
+  section {
+    width: 40%;
+  }
+.imgcentral1{
+    width: 100%;
+}
+  #imagen1 {
+    display: inline;
+    align-content: center;
+    justify-content: center;
+  
+  }
+  .textocentral1{
+    display:flex;
+    text-align: justify;
+  }
+ 
+  #entrada {
+    display: inline;
+    align-content: center;
+    justify-content: center;
+   
+  }
+  #botonentrada{
+    margin-left: 35%;
   }
 }
 @media screen and (max-width: 425px) {
   .central {
     width: 95%;
   }
+  section {
+    width: 100%;
+  }
+
   #linksnav {
     position: relative;
 }
@@ -164,11 +229,11 @@ footer{
     position: absolute;
     top: 0px;
     right: 0px;
-    background:rgba(255, 255, 255, 0.5);
+    background:rgb(255, 255, 255);
   }
   .hamburguesa {
-    border: 1px solid gray;
-    text-align: center;
+    display: flex;
+  
   }
 
   .hamburguesa:hover + .menulista{
