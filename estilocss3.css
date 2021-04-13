@@ -260,13 +260,15 @@ border: 1px solid blue;
     width: 97%;
   
   }
-  section {
+  .central section,
+  .triple section {
     width: 40%;
   }
-/* .imgcentral1,
-.imgtriple1 {
+
+  .imgcentral1,
+  .imgtriple1{
     width: 100%;
-} */
+  }
   #imagen1,
   #noticias {
     display: inline;
@@ -292,15 +294,14 @@ border: 1px solid blue;
   }
 }
 @media screen and (max-width: 425px) {
-  .central{
+  .central,
+  .triple{
     width: 95%;
   }
-  .triple {
-    width: 95%;
-  }
-  /* section {
+  .central section,
+  .triple section {
     width: 100%;
-  } */
+  }
 
   #linksnav {
     position: relative;
