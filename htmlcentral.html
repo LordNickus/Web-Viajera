@@ -11,17 +11,14 @@
 
 </head>
 <body>
-    <header id="htop"> <!-- /*first-nav*/ -->
+    <header id="htop"> 
             <div>
-                <ul id="redestop">
-                <li>Youtube</li>
-                <li>Facebook</li>
-                <li>Instagram</li>
-                <li>Wassap</li>
-            </ul>
-            </div>
+                <ul class="redesTop"> <!--// trae del js // -->
+                </ul>
+            </div> 
             <div id="lupa">
                 <button>Que estas buscando?</button>
+                <input type="text" />
                 <img src="imagenes/Lupa2.png"alt="lupa"width="30" height="30">
             </div>
        
@@ -32,18 +29,45 @@
 
     </header>
 
-    <nav id="linksnav"><!-- /*second-nav-menu*/ -->
-        <div class="hamburguesa"><!-- /*second-nav-hamburger*/ -->
+    <nav id="linksnav">
+        <div class="hamburguesa">
             <img src="imagenes/menu.svg">
         </div>
-        <div class="menulista"><!-- /*second-nav-links*/ -->
-            <a href='#Nosotros'>Nosotros</a>
-            <a href='#Noticias'>Noticias</a>
-            <a href='#Viajes'>Viajes</a>
-            <a href='#Consejos'>Consejos</a>
-            <a href='#El rincon perezoso'>El rincon perezoso</a>
+        <div class="menulista">
+            <li class="menu"><a href='#imagen1'>Nosotros</a>
+                <ul class="subm">
+                    <li><a href='#Anne'>Anne</a></li>
+                    <li><a href='#Franco'>Franco</a></li>
+                </ul>
+            </li>
+            <li class="menu"><a href='#noticias'>Noticias</a>
+                <ul class="subm">
+                    <li><a href='#Nacionales'>Nacionales</a></li>
+                    <li><a href='#Internacionales'>Internacionales</a></li>
+                    <li><a href='#Cambio Monedas'>Cambio Monedas</a></li>
+                </ul>
+            </li>
+            <li class="menu"><a href='#viajes'>Viajes</a>
+                <ul class="subm">
+                    <li><a href='#Lugares Imperdibles'>Lugares Imperdibles</a></li>
+                    <li><a href='#Donde dormir?'>Donde dormir?</a></li>
+                    <li><a href='#Donde comer?'>Donde comer?</a></li>
+                    <li><a href='#Que hacer?'>Que hacer?</a></li>
+                    <li><a href='#Visita Obligada'>Visita Obligada</a></li>
+                </ul>
+            </li>
+            <li class="menu"><a href='#consejos'>Consejos</a>
+                <ul class="subm">
+                    <li><a href='#Estaciones de Servicios'>Estaciones de Servicios</a></li>
+                    <li><a href='#Bancos/Cajeros/Cashbank'>Bancos/Cajeros/Cashbank</a></li>
+                    <li><a href='#Info util Pre-viaje'>Info util Pre-viaje</a></li>
+                    <li><a href='#Estaciones climaticas'>Estaciones climaticas</a></li>
+                </ul>
+            </li>
+            <li class="menu"><a href='#El rincon perezoso'>El rincon perezoso</a></li>
         </div>
     </nav>
+
 <div class="central">    
 
     <section id="imagen1">
@@ -71,13 +95,11 @@
 <div class="triple">    
 
     <section id="noticias">
-        <h2>NOTCIAS</h2>
+        <h2>NOTICIAS</h2>
         <img class="imgtriple1"src="imagenes/-Inserte_título_aquí-.png" width="200" height="200">
-        <div class="textocentral1">
-        <p>Este es un parrafo para describir algo referente a los creadores de
-            la web, que deben ser personas muy muy inteligentes porque me contrataron a mi para esto...</p>
-        </div> 
-          
+        <div class="textocentral2">
+            <p>Este es un parrafo para incluir noticias actuales.</p>
+        </div>  
     </section>
 
 
@@ -88,8 +110,10 @@
         </div>
         <div>
         <img class="imgtriple1"src="imagenes/su-texto-aquí-.jpg" width="200" height="200">
-    </div>
-
+        </div>
+        <div class="textocentral2">
+            <p>Este es un parrafo para incluir hermosos destinos para visitar.</p>
+        </div> 
     </section>
     <section id="consejos">
         <h2>CONSEJOS</h2>
@@ -97,9 +121,11 @@
             <button>Metete aca!</button>
         </div>
         <div>
-        <img class="imgtriple1"src="imagenes/su-texto-aquí-.jpg" width="200" height="200">
-    </div>
-
+            <img class="imgtriple1"src="imagenes/su-texto-aquí-.jpg" width="200" height="200">
+        </div>
+        <div class="textocentral2">
+            <p>Este es sector para aconsejarte en tus viajes.</p>
+        </div> 
     </section>
 
 </div>
@@ -112,11 +138,11 @@
 
         <h1>Este es el pie</h1>
         <div class="piepagina">
-        <p>Y aca pondriamos las letras chiquitas,
+            <p>Y aca pondriamos las letras chiquitas,
             con los derechos reservados, las redes,
             y alguna gilada mas...            
-        </p>
-    </div>
+            </p>
+        </div>
 
     </footer>
 
@@ -124,8 +150,7 @@
         En este sitio utilizamos cookies, te guste o no acepta.
         <a href="#">Aceptar</a>
     </div>
-    <script src="js/htmlcentral.js">
+    <script src="js/htmlcentral.js"></script>
 
-    </script>
 </body>
 </html>
