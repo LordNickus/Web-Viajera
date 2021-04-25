@@ -157,7 +157,8 @@ nav{
     text-align: left;
     
 }
-.central {
+.central,
+.centralViajes {
   display: flex;
   justify-content:space-evenly; 
   align-items:center;
@@ -176,7 +177,7 @@ nav{
   
 }
 section:hover {
-  transform: scale(1.03);
+  transform: scale(1.01);
   
 }
 section{
@@ -193,12 +194,34 @@ section{
     text-align: justify;
     font-family: 'Work Sans', sans-serif;
 }
+#imagen2{
+  width: 45%;
+  background-color: rgba(250, 247, 79, 0.8);
+  transition: transform ease-in-out 0.3s 0.1s;
+   
+}
+.textocentral2{
+  color: #06097C;
+  background-color: rgba(182, 180, 180, 0.3);
+  display:ruby-text;
+  text-align: justify;
+  font-family: 'Work Sans', sans-serif;
+}
+
 #entrada{
-    display: inline;
-    align-items:center;
-    background-color: rgba(15, 240, 45, 0.8);
-    transition: transform ease-in-out 0.3s 0.1s;
+  display: inline;
+  align-items:center;
+  background-color: rgba(15, 240, 45, 0.8);
+  transition: transform ease-in-out 0.3s 0.1s;
     
+}
+#entrada2{
+  width: 45%;
+  display: inline;
+  align-items:center;
+  background-color: rgba(15, 240, 45, 0.8);
+  transition: transform ease-in-out 0.3s 0.1s;
+  
 }
 #botonentrada{
   margin-left: 40%;
@@ -338,6 +361,15 @@ border: 1px solid blue;
   display: block;
   align-items:center;
   background-color: rgba(240, 15, 240, 0.8);
+  transition: transform ease-in-out 0.3s 0.1s;
+}
+
+/* Hoja Consejos */
+#consejosSeccion{
+  width:46%;
+  display: inline-block;
+  align-items:center;
+  background-color: rgba(250, 247, 79, 0.8);
   transition: transform ease-in-out 0.3s 0.1s;
 }
 

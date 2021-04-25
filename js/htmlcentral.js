@@ -22,68 +22,128 @@ for(var i=0; i<redesSociales.length; i++){
     productContainer.innerHTML += '<img src="' + redesSociales[i].logoImagen + '"alt="' + redesSociales[i].alterno +
     '"width="30" height="30"><a>' + redesSociales[i].marcaImagen + '</a>'
 }
+
 // menu del nav //
 var menuContainer = document.querySelector('.menulista')
 var menusLista =[
-    { destinoHtml : 'a1_nosotros.html',
+    { destinoHtml : 'a1_nosotros',
       menuPricipal : 'Nosotros',
-      subMenu1 : 'a1_nosotros.html#Anne',
-      subMenu1N : 'Anne',
-      subMenu2 : 'a1_nosotros.html#Franco',
-      subMenu2N : 'Franco',
-      subMenu3 : 'null',
-      subMenu3N : 'null',
-      subMenu4 : 'null',
-      subMenu4N : 'null',
-      subMenu5 : 'null',
-      subMenu5N : 'null',
+      subLinks :[{
+          destinoHtml : 'a1_nosotros.html#Anne',
+          menuPricipal : 'Anne',
+        },
+        {
+          destinoHtml : 'a1_nosotros.html#Franco',
+          menuPricipal : 'Franco',
+        }],
     },
-    { destinoHtml : 'a2_noticias.html',
-      menuPricipal : 'Noticias',
-      subMenu1 : 'a2_noticias.html#Nacionales',
-      subMenu1N : 'Nacionales',
-      subMenu2 : 'a2_noticias.html#Internacionales',
-      subMenu2N : 'Internacionales',
-      subMenu3 : 'a2_noticias.html#cambioMoneda',
-      subMenu3N : 'Cambio Monedas',
+    {   destinoHtml : 'a2_noticias',
+        menuPricipal : 'Noticias',
+        subLinks : [{
+          destinoHtml : 'a2_noticias.html#Nacionales',
+          menuPricipal : 'Nacionales',
+      },
+      {
+         destinoHtml : 'a2_noticias.html#Internacionales',
+         menuPricipal : 'Internacionales',
+      },
+      {  
+         destinoHtml : 'a2_noticias.html#cambioMoneda',
+         menuPricipal : 'Cambio Monedas',
+      }],
     },
-    { destinoHtml : 'a3_viajes.html',
-      menuPricipal : 'Viajes',
-      subMenu1 : 'a3_viajes.html#Lugares Imperdibles',
-      subMenu1N : 'Lugares Imperdibles',
-      subMenu2 : 'a3_viajes.html#Donde dormir?',
-      subMenu2N : 'Donde dormir?',
-      subMenu3 : 'a3_viajes.html#Donde comer?',
-      subMenu3N : 'Donde comer?',
-      subMenu4 : 'a3_viajes.html#Que hacer?',
-      subMenu4N : 'Que hacer?',
-      subMenu5 : 'a3_viajes.html#Visita Obligada',
-      subMenu5N : 'Visita Obligada',
+    {   destinoHtml : 'a3_viajes',
+        menuPricipal : 'Viajes',
+        subLinks : [{
+          destinoHtml : 'a3_viajes.html#Lugares Imperdibles',
+          menuPricipal : 'Lugares Imperdibles',
+      },
+      {
+          destinoHtml : 'a3_viajes.html#Donde dormir?',
+          menuPricipal : 'Donde dormir?',
+      },
+      {
+          destinoHtml : 'a3_viajes.html#Donde comer?',
+          menuPricipal : 'Donde comer?',
+      },
+      {
+          destinoHtml : 'a3_viajes.html#Que hacer?',
+          menuPricipal : 'Que hacer?',
+      },
+      {
+          destinoHtml : 'a3_viajes.html#Visita Obligada',
+          menuPricipal : 'Visita Obligada',
+      }],
     },
-    { destinoHtml : 'a4_consejos.html',
-      menuPricipal : 'Consejos',
-      subMenu1 : 'a4_consejos.html#Estaciones de Servicios',
-      subMenu1N : 'Estaciones de Servicios',
-      subMenu2 : 'a4_consejos.html#Bancos/Cajeros/Cashbank',
-      subMenu2N : 'Bancos/Cajeros/Cashbank',
-      subMenu3 : 'a4_consejos.html#Info util Pre-viaje',
-      subMenu3N : 'Info util Pre-viaje',
-      subMenu4 : 'a4_consejos.html#Estaciones climaticas',
-      subMenu4N : 'Estaciones climaticas',
+    {   destinoHtml : 'a4_consejos',
+        menuPricipal : 'Consejos',
+        subLinks : [{
+          destinoHtml : 'a4_consejos.html#Estaciones de Servicios',
+          menuPricipal : 'Estaciones de Servicios',
+      },
+      {
+          destinoHtml : 'a4_consejos.html#Bancos/Cajeros/Cashbank',
+          menuPricipal : 'Bancos/Cajeros/Cashbank',
+      },
+      {
+          destinoHtml : 'a4_consejos.html#Info util Pre-viaje',
+          menuPricipal : 'Info util Pre-viaje',
+      },
+      {
+          destinoHtml : 'a4_consejos.html#Estaciones climaticas',
+          menuPricipal : 'Estaciones climaticas',
+      }],
     },
-    { destinoHtml : 'a5_rinconp.html',
+    { destinoHtml : 'a5_rinconp',
       menuPricipal : 'El rincon perezoso',
+      subLinks : [{}]
       },
 ]
 
-for(var i=0; i<menusLista.length; i++){
-    menuContainer.innerHTML += '<li class="menu"><a href="' + menusLista[i].destinoHtml + '">' + menusLista[i].menuPricipal +
-    '</a><ul class="subm"><li><a href="' + menusLista[i].subMenu1 + '">' + menusLista[i].subMenu1N +'</a></li><li><a href="' + 
-    menusLista[i].subMenu2 + '">' + menusLista[i].subMenu2N + '</a></li><li><a href="'+ menusLista[i].subMenu3 + '">' + 
-    menusLista[i].subMenu3N + '</a></li><li><a href="' + menusLista[i].subMenu4 + '">' + menusLista[i].subMenu4N + '</a></li><li><a href="' 
-    + menusLista[i].subMenu5 + '">' + menusLista[i].subMenu5N + '</a></li></ul></li>'
-}
+  for(var i=0; i<menusLista.length; i++) {
+    menuContainer.innerHTML += '<li class="menu"><a href="' + menusLista[i].destinoHtml + '.html">'
+    + menusLista[i].menuPricipal + '</a>'
+    for(var j=0; j<menusLista.length; j++) {
+        menuContainer.innerHTML += '<ul class="subm"><li><a href="' 
+        + menusLista[i].subLinks[j] + '">' + menusLista[i].subLinks[j] + '</a></li></ul></li>'
+    
+      }
+  }
+  
 
+// for(var i=0; i<menusLista.length; i++) {
+//     for(var j=0; j<menusLista.length; j++) {
+//     menuContainer.innerHTML += '<li class="menu"><a href="' + menusLista[i].destinoHtml + '.html">'
+//     + menusLista[i].menuPricipal + '</a><ul class="subm"><li><a href="' 
+//     + menusLista[i].subLinks[j] + '">' + menusLista[i].subLinks[j] + '</a></li></ul></li>'
+//   }
+//   }
+
+// function generateLink(menusLista) {
+//   return '<li class="menu"><a href="' + menusLista[i].destinoHtml + '">'+ menusLista[i].menuPricipal + '</a>'
+  // <ul class="subm"><li><a href="'  + sublinks.destinoHtml[j] + '">' + sublinks.menuPricipal[j] + '</a></li></ul></li>'
+
+  //   for (var i = 0; i < links.length; i++) {
+  //     linksContainer.innerHTML += generateLink(links[i])
+  // }
+  
+  // function generateLink(link) {
+  //     return '<a href="' + link.href + '">' + link.name + '</a>'
+  // }
+
+  
+  // for(var j=0; j<subLinks.length; j++)
+    // menuContainer.innerHTML += '<li class="menu"><a href="' + menusLista[i].destinoHtml + '">' + menusLista[i].menuPricipal +
+    // '</a><ul class="subm"><li><a href="' + menusLista[i].subMenu1 + '">' + menusLista[i].subMenu1N +'</a></li><li><a href="' + 
+    // menusLista[i].subMenu2 + '">' + menusLista[i].subMenu2N + '</a></li><li><a href="'+ menusLista[i].subMenu3 + '">' + 
+    // menusLista[i].subMenu3N + '</a></li><li><a href="' + menusLista[i].subMenu4 + '">' + menusLista[i].subMenu4N + '</a></li><li><a href="' 
+    // + menusLista[i].subMenu5 + '">' + menusLista[i].subMenu5N + '</a></li></ul></li>'
+
+                                        // <li class="menu"><a href='...'>...</a>
+                                        //     <ul class="subm">
+                                        //         <li><a href='...'>...</a></li>
+                                        //     </ul>
+                                        // </li>
 
            //* <li class="menu"><a href='a1_nosotros.html'>Nosotros</a>
            //     <ul class="subm">
@@ -98,15 +158,15 @@ for(var i=0; i<menusLista.length; i++){
             //        <li><a href='a2_noticias.html#cambioMoneda'>Cambio Monedas</a></li>
             //    </ul>
             //*</li>
-            // <li class="menu"><a href='a3_viajes.html'>Viajes</a>
-            //     <ul class="subm">
-            //         <li><a href='a3_viajes.html#Lugares Imperdibles'>Lugares Imperdibles</a></li>
-            //         <li><a href='a3_viajes.html#Donde dormir?'>Donde dormir?</a></li>
-            //         <li><a href='a3_viajes.html#Donde comer?'>Donde comer?</a></li>
-            //         <li><a href='a3_viajes.html#Que hacer?'>Que hacer?</a></li>
-            //         <li><a href='a3_viajes.html#Visita Obligada'>Visita Obligada</a></li>
-            //     </ul>
-            // </li>
+                                        // <li class="menu"><a href='a3_viajes.html'>Viajes</a>
+                                        //     <ul class="subm">
+                                        //         <li><a href='a3_viajes.html#Lugares Imperdibles'>Lugares Imperdibles</a></li>
+                                        //         <li><a href='a3_viajes.html#Donde dormir?'>Donde dormir?</a></li>
+                                        //         <li><a href='a3_viajes.html#Donde comer?'>Donde comer?</a></li>
+                                        //         <li><a href='a3_viajes.html#Que hacer?'>Que hacer?</a></li>
+                                        //         <li><a href='a3_viajes.html#Visita Obligada'>Visita Obligada</a></li>
+                                        //     </ul>
+                                        // </li>
             // <li class="menu"><a href='a4_consejos.html'>Consejos</a>
             //     <ul class="subm">
             //         <li><a href='a4_consejos.html#Estaciones de Servicios'>Estaciones de Servicios</a></li>
@@ -136,7 +196,7 @@ aceptar.addEventListener('click', function(){
 //footer form button//
 var botonEnviar = document.querySelector('footer form button')
 
-botonEnviar.addEventListener('click', function () {
+botonEnviar.addEventListener('click', function() {
     botonEnviar.parentElement.remove()
 
     let parrafo = document.createElement('p')
