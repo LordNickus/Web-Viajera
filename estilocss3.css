@@ -133,7 +133,7 @@ nav{
     padding: 10px 15px;
     font-family: 'Crimson Pro', serif;
     border-radius: 3px;
-    /* display: block; */
+    display: block;
   }
 .subm {
     display: none;

@@ -24,6 +24,8 @@ for(var i=0; i<redesSociales.length; i++){
 }
 
 // menu del nav //
+
+
 var menuContainer = document.querySelector('.menulista')
 var menusLista =[
     { destinoHtml : 'a1_nosotros',
@@ -96,23 +98,78 @@ var menusLista =[
     },
     { destinoHtml : 'a5_rinconp',
       menuPricipal : 'El rincon perezoso',
-      subLinks : [{}]
+      subLinks : []
       },
 ]
+var navMenu=""
+ for(var i=0; i<menusLista.length; i++) {
+ navMenu+='<li class="menu"><a href="' + menusLista[i].destinoHtml + '.html">'
+  + menusLista[i].menuPricipal + '</a><ul class="subm">';
+  for(var j=0; j<menusLista[i].subLinks.length; j++) {
+    navMenu += '<li><a href="'+ menusLista[i].subLinks[j].destinoHtml + '">' + 
+    menusLista[i].subLinks[j].menuPricipal + '</a></li>';    
+      } 
+      navMenu+='</ul></li>'
+    }
+    menuContainer.innerHTML+=navMenu
 
-  for(var i=0; i<menusLista.length; i++) {
-    menuContainer.innerHTML += '<li class="menu"><a href="' + menusLista[i].destinoHtml + '.html">'
-    + menusLista[i].menuPricipal + '</a>'
-    for(var j=0; j<menusLista.length; j++) {
-        menuContainer.innerHTML += '<ul class="subm"><li><a href="' 
-        + menusLista[i].subLinks[j] + '">' + menusLista[i].subLinks[j] + '</a></li></ul></li>'
-    
-      }
-  }
+// //////// for (i=0;i<titulos.length;i++) {
+  //   /////localizar elementos principales
+  //   /////menu[i]=document.getElementById("seccion"+i);
+  //   ==================================================>>>>/////crear elemento menu desplegable <<==================
+  //  =====================> menu[i].innerHTML+="<div id='subseccion"+i+"'></div>"
+  //   //localizar elemento menu desplegable
+  //   ====================> submenu[i]=document.getElementById('subseccion'+i);
+  //   //escribir menu desplegable
+  //   ===================> for (j=0;j<titulos[i].length;j++) {
+  //       submenu[i].innerHTML += "<p><a href='"+enlaces[i][j]+"'>"+titulos[i][j]+"</a></p>";
+  //       }
+
+
+// function generateLink(menusLista) {
+//   for(var i=0; i<menusLista.length; i++) {
+//     menuContainer.innerHTML+='<li class="menu"><a href="' + menusLista[i].destinoHtml + '.html">'
+//     + menusLista[i].menuPricipal + '</a>';
+//     for(var j=0; j<menusLista[i].subLinks.length; j++) {
+//       menuContainer.innerHTML += '<ul class="subm"><li><a href="'+ menusLista[i].subLinks[j].destinoHtml + '">' + menusLista[i].subLinks[j].menuPricipal + '</a></li></ul></li>'    
+//         }
+//      }
+//       for (var i = 0; i < links.length; i++) {
+//       linksContainer.innerHTML += generateLink(menusLista[i])
+//   }
+// }
+
+  
+
+
+// for(var j=0; j<menusLista[i].subLinks.length; j++) {
+// function generateLink(j) {
+//   menuContainer.innerHTML += '<ul class="subm"><li><a href="'+ menusLista[i].subLinks[j].destinoHtml + '">' + menusLista[i].subLinks[j].menuPricipal + '</a></li></ul></li>'
+//  }
+// }
+
+
+
+// for(var i=0; i<menusLista.length; i++) {
+
+//   menuContainer.innerHTML += '<li class="menu"><a href="' + menusLista[i].destinoHtml + '.html">'
+//   + menusLista[i].menuPricipal + '</a>' + generateLink    
+//     }
+
+// function generateLink(link) {
+  //     return '<a href="' + link.href + '">' + link.name + '</a>'
+  // }
+
+  // for(var i=0; i<menusLista.length; i++) {
+  //   for(var j=0; j<menusLista[i].subLinks.length; j++) {
+  //   menuContainer.innerHTML += '<li class="menu"><a href="' + menusLista[i].destinoHtml + '.html">'
+  //   + menusLista[i].menuPricipal + '</a><ul class="subm"><li><a href="'+ menusLista[i].subLinks[j].destinoHtml + '">' + menusLista[i].subLinks[j].menuPricipal + '</a></li></ul></li>'    
+  //     }
+  // }
   
 
 // for(var i=0; i<menusLista.length; i++) {
-//     for(var j=0; j<menusLista.length; j++) {
+//     for(var j=0; j<menusLista[i].subLinks.length; j++) {
 //     menuContainer.innerHTML += '<li class="menu"><a href="' + menusLista[i].destinoHtml + '.html">'
 //     + menusLista[i].menuPricipal + '</a><ul class="subm"><li><a href="' 
 //     + menusLista[i].subLinks[j] + '">' + menusLista[i].subLinks[j] + '</a></li></ul></li>'
@@ -121,15 +178,13 @@ var menusLista =[
 
 // function generateLink(menusLista) {
 //   return '<li class="menu"><a href="' + menusLista[i].destinoHtml + '">'+ menusLista[i].menuPricipal + '</a>'
-  // <ul class="subm"><li><a href="'  + sublinks.destinoHtml[j] + '">' + sublinks.menuPricipal[j] + '</a></li></ul></li>'
+  // <ul class="subm"><li><a href="'  + sublinks[j].destinoHtml + '">' + sublinks[j].menuPricipal + '</a></li></ul></li>'
 
   //   for (var i = 0; i < links.length; i++) {
   //     linksContainer.innerHTML += generateLink(links[i])
   // }
   
-  // function generateLink(link) {
-  //     return '<a href="' + link.href + '">' + link.name + '</a>'
-  // }
+  
 
   
   // for(var j=0; j<subLinks.length; j++)
